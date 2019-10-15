@@ -1,0 +1,10 @@
+{
+    "name": "lifelong-wp-source",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "build": "gatsby build",
+        "clean": "gatsby clean",
+        "develop": "gatsby develop"
+    }
+}
