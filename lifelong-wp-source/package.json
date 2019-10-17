@@ -2,9 +2,23 @@
     "name": "lifelong-wp-source",
     "version": "1.0.0",
     "main": "index.js",
+    "license": "UNLICENSED",
     "scripts": {
         "build": "gatsby build",
         "clean": "gatsby clean",
         "develop": "gatsby develop"
+    },
+    "peerDependencies": {
+        "gatsby": "^2.16.3",
+        "react": "^16.10.2",
+        "react-dom": "^16.10.2"
+    },
+    "devDependencies": {
+        "gatsby": "^2.16.3",
+        "react": "^16.10.2",
+        "react-dom": "^16.10.2"
+    },
+    "dependencies": {
+        "gatsby-source-wordpress": "^3.1.43"
     }
 }
