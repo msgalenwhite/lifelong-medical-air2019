@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "gatsby": "^2.16.5",
+    "lifelong-wp-source": "*",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
   },
