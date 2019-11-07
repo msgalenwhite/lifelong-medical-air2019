@@ -6,6 +6,10 @@ body {
   margin: 0;
   font: normal 10px/20px Arial, Helvetica, sans-serif;
   background-color: $white;
+
+  .pageContent {
+    margin: 0 2em;
+  }
 }
 
 button {
@@ -31,13 +35,35 @@ button {
 .header {
   text-transform: uppercase;
   background: $logo-blue;
-  color: $white;
   display: flex;
   justify-content: flex-end;
 
   .headerText {
+    color: $white;
+    text-decoration: none;
     margin: 10px 15px;
     font-weight: bold;
+  }
+
+  .primaryActive {
+    font-weight: bold;
+  }
+}
+
+.secondaryHeader {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 11px;
+
+  .secondaryHeaderText {
+    text-decoration: none;
+    color: black;
+    margin: 10px 15px;
+  }
+
+  .secondaryActive {
+    font-weight: bold;
+    color: $logo-blue;
   }
 }
 
