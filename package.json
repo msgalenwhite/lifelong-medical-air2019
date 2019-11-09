@@ -1,4 +1,7 @@
 {
     "private": true,
-    "workspaces": ["lifelong-wp-source"]
+    "workspaces": ["lifelong-wp-source", "lifelong-medical"],
+    "scripts": {
+        "wp-source-develop": "yarn workspace lifelong-wp-source develop"
+    }
 }
