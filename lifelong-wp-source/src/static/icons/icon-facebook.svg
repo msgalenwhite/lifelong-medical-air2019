@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-facebook</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Sprint-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LLMedical-HomePage_1440" transform="translate(-258.000000, -2082.000000)" fill="#FFFFFF">
+            <g id="Footer-Map" transform="translate(0.000000, 2001.000000)">
+                <g id="social" transform="translate(120.000000, 81.000000)">
+                    <path d="M166,14.0855588 C166,6.30631374 159.731992,0 152,0 C144.268008,0 138,6.30631374 138,14.0855588 C138,21.1160683 143.119625,26.943308 149.8125,28 L149.8125,18.1571656 L146.257812,18.1571656 L146.257812,14.0855588 L149.8125,14.0855588 L149.8125,10.9823341 C149.8125,7.45214093 151.902602,5.50217139 155.100508,5.50217139 C156.63225,5.50217139 158.234375,5.77727996 158.234375,5.77727996 L158.234375,9.24364794 L156.469008,9.24364794 C154.729891,9.24364794 154.1875,10.3293914 154.1875,11.443306 L154.1875,14.0855588 L158.070312,14.0855588 L157.449609,18.1571656 L154.1875,18.1571656 L154.1875,28 C160.88043,26.943308 166,21.1160683 166,14.0855588 Z" id="icon-facebook"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

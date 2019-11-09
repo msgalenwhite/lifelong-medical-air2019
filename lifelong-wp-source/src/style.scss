@@ -3,9 +3,12 @@ $light-gray: #F7F7F7;
 $white: #FFFFFF;
 $green: #BFD430;
 $accent-blue: #05508C;
-$header-font: .1em, 'Open Sans Extra Bold', Helvetica, sans-serif;
+$marine-blue: #084F8B;
+$header-font: .1em, 'Source Sans Pro', sans-serif;
+$image-radus: 2%;
+$page-width: 85em;
 
-@import url('https://fonts.googleapis.com/css?family=Arvo|Bitter&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro:300,400,400i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 
 .centerText {
   text-align: center;
@@ -14,11 +17,89 @@ $header-font: .1em, 'Open Sans Extra Bold', Helvetica, sans-serif;
 body {
   margin: 0;
   background-color: $white;
-  font-family: 'Open Sans', 'Arial', sans-serif;
-
-  .pageContent {
-    margin: 0 2em;
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  color: $marine-blue;
+}
+.pageContent {
+  max-width: $page-width;
+  margin: auto;
+}
+.logoNavBar {
+  max-width: $page-width;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  .logo {
+    margin: 1em;
+    height: 80px;
   }
+  .secondaryHeader {
+    font-family: $header-font;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: .9em;
+    height: 5.7em;
+    font-weight: bold;
+
+    .secondaryHeaderText {
+      text-decoration: none;
+      color: black;
+      margin: 10px 15px;
+      padding: .2em;
+    }
+
+    .secondaryActive {
+      color: $logo-blue;
+      border-bottom-style: solid;
+      border-bottom-color: $green;
+      border-bottom-width: .3em;
+    }
+  }
+}
+.headerImage {
+  display: flex;
+  justify-content: center;
+  background: $marine-blue;
+  padding: 0;
+}
+
+.values {
+  text-align: left;
+}
+
+.slice {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-height: 20em;
+  text-align: left;
+  margin: .5em auto;
+
+  p {
+    text-align: left;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+
+  .sliceImage {
+    width: auto;
+    height: auto;
+  }
+  .sliceText {
+    padding: 0 3em;
+    max-width: $page-width - 35em;
+  }
+}
+hr {
+  flex-basis: 100%;
+  height: 0;
+  margin: 0;
+  border: 0;
 }
 
 p {
@@ -35,49 +116,49 @@ button {
   border-radius: 20px;
   font-size: .8em;
   outline: 0;
-  border: 1px solid $logo-blue;
+  border: 1px solid $marine-blue;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+.centerBlock {
+  margin: 0 10em;
+}
+.center{
+  display: flex;
+  justify-content: center;
 }
 
+
 .blueButton {
-  background: $logo-blue;
+  background: $marine-blue;
   color: $white;
 }
 
 .whiteButton {
   background: $white;
-  color: $logo-blue;
+  color: $marine-blue;
 }
 
 .header {
   font-family: $header-font;
   text-transform: uppercase;
-  background: $logo-blue;
+  background: $marine-blue;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 
   .headerText {
     color: $white;
     text-decoration: none;
     margin: 10px 15px;
     font-size: .8em;
-  }
-}
 
-.secondaryHeader {
-  font-family: $header-font;
-  display: flex;
-  justify-content: flex-end;
-  font-size: .9em;
-
-  .secondaryHeaderText {
-    text-decoration: none;
-    color: black;
-    margin: 10px 15px;
-  }
-
-  .secondaryActive {
-    font-weight: bold;
-    color: $logo-blue;
+    img {
+      margin-right: .5em;
+    }
   }
 }
 
@@ -93,10 +174,23 @@ button {
   display: flex;
   justify-content: center;
   padding: 30px;
+  margin-top: 1em;
+
+  h3 {
+    color: white;
+    font-size: .9em;
+    text-align: left;
+    margin: 0;
+    margin-bottom: .4em;
+  }
+  p, address {
+    font-size: .7em;
+    text-align: left;
+  }
 
   .column {
-    margin: 0 10px;
-    width: 150px;
+    margin: 0 .5em;
+    width: 10em;
   }
 
   .columnHeader {
@@ -108,5 +202,13 @@ button {
     padding: 0;
     margin-top: .7em;
     font-size: .7em;
+  }
+
+  .socialIconBar {
+    img {
+      height: 1em;
+      padding: .2em;
+      margin: .4em 0;
+    }
   }
 }

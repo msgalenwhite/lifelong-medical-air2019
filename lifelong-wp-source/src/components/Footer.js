@@ -1,66 +1,87 @@
-const React = require('React');
+const React = require("React")
+const SocialIconBar = require("./SocialIconBar")
 
-const Footer = (props) => {
+const Footer = props => {
+  const contactColumn = (
+    <div className="column">
+      <h3>Contact Us</h3>
+      <p>(510) 981 - 4100</p>
+      <br />
+      <h3>Mailing Address</h3>
+      <address>
+        P.O.Box 11247
+        <br />
+        Berkley, CA 94712
+      </address>
+      <SocialIconBar />
+    </div>
+  )
 
-  const footerText = _footerTextExamples.map(columnData => {
+  const footerText = _footerTextExamples.map((columnData, dataIndex) => {
     const items = columnData.content.map((item, index) => {
       return <li key={`${columnData.header}_${item}_${index}`}>{item}</li>
     })
 
     return (
-      <div className='column'>
-        <div className='columnHeader'>{columnData.header}</div>
+      <div className="column" key={`footer_column_${dataIndex}`}>
+        <h3>{columnData.header}</h3>
         <ul>{items}</ul>
       </div>
     )
   })
 
-  return(
-    <div className='footer'>{footerText}</div>
+  return (
+    <div className="footer">
+      {contactColumn}
+      {footerText}
+    </div>
   )
 }
 
 const _footerTextExamples = [
   {
-    header: 'About Us',
+    header: "About Us",
     content: [
-      'Mission',
-      'Executive Leadership',
-      'History',
-      'Diversity',
-      'Partnerships'
-    ]
+      "Mission",
+      "Executive Leadership",
+      "History",
+      "Diversity",
+      "Partnerships",
+    ],
   },
   {
-    header: 'Program & Services',
+    header: "Program & Services",
     content: [
-      'Mission',
-      'Executive Leadership',
-      'History',
-      'Diversity',
-      'Partnerships'
-    ]
+      "Mission",
+      "Executive Leadership",
+      "History",
+      "Diversity",
+      "Partnerships",
+    ],
   },
   {
-    header: 'Locations',
+    header: "Locations",
     content: [
-      'Mission',
-      'Executive Leadership',
-      'History',
-      'Diversity',
-      'Partnerships'
-    ]
+      // "Mission",
+      // "Executive Leadership",
+      // "History",
+      // "Diversity",
+      // "Partnerships",
+      "Health",
+      "Dental",
+      "Behavioral Health",
+    ],
   },
   {
-    header: 'Support Us',
+    header: "Support Us",
     content: [
-      'Mission',
-      'Executive Leadership',
-      'History',
-      'Diversity',
-      'Partnerships'
-    ]
-  }
+      "Mission",
+      "Executive Leadership",
+      "History",
+      "Diversity",
+      "Partnerships",
+    ],
+  },
 ]
 
-module.exports = Footer;
+module.exports = Footer

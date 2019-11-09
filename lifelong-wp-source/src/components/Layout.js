@@ -1,77 +1,60 @@
-const React = require('React');
-const ContactBar = require('./ContactBar.js')
-const Footer = require('./Footer.js')
-const {Link} = require('gatsby')
+const React = require("React")
+const Footer = require("./Footer.js")
+const HeaderNavBar = require("./HeaderNavBar.js")
 
-const Layout = (props) => {
-  const phoneNumber = <span className='headerText'>{"(510) 981 - 4100"}</span>
+const phoneIcon = require("../static/icons/icon-phone.svg")
 
-  const primaryHeader = [{
-    text: 'Patient Portal',
-    route: '/patients'
-  }, {
-    text: 'Language'
-  }].map(item => {
+const Layout = props => {
+  const phoneNumber = (
+    <span className="headerText">
+      <img src={phoneIcon} alt="phone number" />
+      {"(510) 981 - 4100"}
+    </span>
+  )
+
+  const primaryHeader = [
+    {
+      text: "Patient Portal",
+      route:
+        "https://www.lifelongmedical.org/contact-us-main/patient-portal.html",
+    },
+    {
+      text: "Donate Now",
+    },
+    {
+      text: "Language",
+    },
+  ].map((item, index) => {
     if (item.route !== null) {
       return (
-        <Link
-          to={item.route}
-          className='headerText'
-          replace
+        <a
+          key={`primary_header_${index}`}
+          className="headerText"
+          href={item.route}
         >
           {item.text}
-        </Link>
+        </a>
       )
     } else {
       return (
-        <span className='headerText'>
+        <span key={`primary_header_${index}`} className="headerText">
           {item.text}
         </span>
       )
     }
   })
 
-  const secondaryHeader = [{
-      text: 'Our Services',
-      route: '/'
-    }, {
-      text: 'Find a Location',
-      route: '/locations'
-    }, {
-      text: 'Make an Appointment',
-      route: '/appointment'
-    }].map(item => {
-      if (item.route !== null) {
-        return (
-          <Link
-            to={item.route}
-            className='secondaryHeaderText'
-            activeClassName='secondaryActive'
-            partiallyActive={item.text !== 'Our Services'}
-            replace
-          >
-            {item.text}
-          </Link>
-        )
-      } else {
-        return (
-          <span className='secondaryHeaderText'>{item.text}</span>
-        )
-      }
-    })
-
-  return(
+  return (
     <div>
-      <div className='header'>
+      <nav className="header">
         {phoneNumber}
         {primaryHeader}
-      </div>
-      <nav className='secondaryHeader'>{secondaryHeader}</nav>
-        {props.children}
-      <ContactBar />
+      </nav>
+      <HeaderNavBar />
+      <div className="pageContent">{props.children}</div>
       <Footer />
     </div>
   )
 }
 
-module.exports = Layout;
+module.exports = Layout
