@@ -1,17 +1,22 @@
 const React = require('React');
-const textExamples = require('./textExamples.js')
 const ContactBar = require('./ContactBar.js')
+const Footer = require('./Footer.js')
 const {Link} = require('gatsby')
 
 const Layout = (props) => {
-  const primaryHeader = textExamples.header.map(item => {
+  const phoneNumber = <span className='headerText'>{"(510) 981 - 4100"}</span>
+
+  const primaryHeader = [{
+    text: 'Patient Portal',
+    route: '/patients'
+  }, {
+    text: 'Language'
+  }].map(item => {
     if (item.route !== null) {
       return (
         <Link
           to={item.route}
           className='headerText'
-          activeClassName='primaryActive'
-          partiallyActive={true}
           replace
         >
           {item.text}
@@ -26,8 +31,16 @@ const Layout = (props) => {
     }
   })
 
-  const secondaryHeader = textExamples.secondaryHeader
-    .map(item => {
+  const secondaryHeader = [{
+      text: 'Our Services',
+      route: '/'
+    }, {
+      text: 'Find a Location',
+      route: '/locations'
+    }, {
+      text: 'Make an Appointment',
+      route: '/appointment'
+    }].map(item => {
       if (item.route !== null) {
         return (
           <Link
@@ -47,28 +60,16 @@ const Layout = (props) => {
       }
     })
 
-  const footerText = textExamples.footer.map(columnData => {
-    const items = columnData.content.map((item, index) => {
-      return <li key={`${columnData.header}_${item}_${index}`}>{item}</li>
-    })
-
-    return (
-      <div className='column'>
-        <div className='columnHeader'>{columnData.header}</div>
-        <ul>{items}</ul>
-      </div>
-    )
-  })
-
   return(
     <div>
-      <div className='header'>{primaryHeader}</div>
+      <div className='header'>
+        {phoneNumber}
+        {primaryHeader}
+      </div>
       <nav className='secondaryHeader'>{secondaryHeader}</nav>
-      <div className='pageContent'>
-      {props.children}
-    </div>
+        {props.children}
       <ContactBar />
-      <div className='footer'>{footerText}</div>
+      <Footer />
     </div>
   )
 }

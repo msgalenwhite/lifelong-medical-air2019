@@ -1,23 +1,39 @@
 $logo-blue: #19457F;
 $light-gray: #F7F7F7;
 $white: #FFFFFF;
+$green: #BFD430;
+$accent-blue: #05508C;
+$header-font: .1em, 'Open Sans Extra Bold', Helvetica, sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Arvo|Bitter&display=swap');
+
+.centerText {
+  text-align: center;
+}
 
 body {
   margin: 0;
-  font: normal 10px/20px Arial, Helvetica, sans-serif;
   background-color: $white;
+  font-family: 'Open Sans', 'Arial', sans-serif;
 
   .pageContent {
     margin: 0 2em;
   }
 }
 
+p {
+  text-align: center;
+  max-width: 60em;
+  margin: auto;
+}
+
 button {
+  font-family: $header-font;
   text-transform: uppercase;
   margin: 5px;
   padding: 10px 15px;
   border-radius: 20px;
-  font-size: 10px;
+  font-size: .8em;
   outline: 0;
   border: 1px solid $logo-blue;
 }
@@ -33,6 +49,7 @@ button {
 }
 
 .header {
+  font-family: $header-font;
   text-transform: uppercase;
   background: $logo-blue;
   display: flex;
@@ -42,18 +59,15 @@ button {
     color: $white;
     text-decoration: none;
     margin: 10px 15px;
-    font-weight: bold;
-  }
-
-  .primaryActive {
-    font-weight: bold;
+    font-size: .8em;
   }
 }
 
 .secondaryHeader {
+  font-family: $header-font;
   display: flex;
   justify-content: flex-end;
-  font-size: 11px;
+  font-size: .9em;
 
   .secondaryHeaderText {
     text-decoration: none;
@@ -73,8 +87,9 @@ button {
 }
 
 .footer {
+  font-family: $header-font;
   background: $logo-blue;
-  color: white;
+  color: $white;
   display: flex;
   justify-content: center;
   padding: 30px;
@@ -91,6 +106,7 @@ button {
   ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin-top: .7em;
+    font-size: .7em;
   }
 }
