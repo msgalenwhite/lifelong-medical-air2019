@@ -1,0 +1,20 @@
+query MyQuery {
+allWordpressPage {
+    nodes {
+      id
+      title
+      content
+      excerpt
+      date
+      modified
+      slug
+      author
+      template
+      acf {
+      __typename
+      primary_header
+      main_content
+      }
+    }
+  }
+}
