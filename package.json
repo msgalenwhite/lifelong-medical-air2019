@@ -1,7 +1,7 @@
 {
     "private": true,
-    "workspaces": ["lifelong-wp-source", "lifelong-medical"],
+    "workspaces": ["gatsby-theme-lifelong-wp-source", "lifelong-medical"],
     "scripts": {
-        "wp-source-develop": "yarn workspace lifelong-wp-source develop"
+        "wp-source-develop": "yarn workspace gatsby-theme-lifelong-wp-source develop"
     }
 }
