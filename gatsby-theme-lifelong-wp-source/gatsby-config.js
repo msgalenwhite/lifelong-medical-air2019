@@ -6,7 +6,7 @@ module.exports = {
             resolve: "gatsby-source-graphql",
             options: {
                 typeName: 'LifeLongWordPress',
-                fieldName: 'lifelongwordpress',
+                fieldName: 'lifeLongWordPress',
                 url: `${process.env.WP_BASE_URL}/graphql`
             }
         }
