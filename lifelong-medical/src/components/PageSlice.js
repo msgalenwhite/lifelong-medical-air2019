@@ -1,6 +1,8 @@
 const React = require("React");
 
 const PageSlice = props => {
+
+
   return (
     <div className="slice">
       <div className="sliceText">{props.children}</div>

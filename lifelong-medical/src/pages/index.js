@@ -14,7 +14,7 @@ Needed content:
   items: Array<string>
 }]
 - header for services - string
-- img
+- img {src: url, alt: string} TODO
 - mission - string
 - header for mission - string
 

@@ -16,6 +16,8 @@ const { Link } = require("gatsby");
 - list of specific services available - TODO
 - payment options - TODO
 - 2 paragraphs of information (can take from current site)
+- location information in addition to map (ex. "Located in the Ed Roberts Campus")
+- contact information
 */
 
 const Locations = props => {
