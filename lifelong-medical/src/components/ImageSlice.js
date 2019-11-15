@@ -1,8 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const PageSlice = props => {
-
-
+const ImageSlice = props => {
   return (
     <div className="slice">
       <div className="sliceText">{props.children}</div>
@@ -11,4 +9,4 @@ const PageSlice = props => {
   );
 };
 
-export default PageSlice
+export default ImageSlice;

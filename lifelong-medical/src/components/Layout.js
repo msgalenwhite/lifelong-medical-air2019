@@ -1,8 +1,8 @@
-import React from 'react'
-import Footer from './Footer'
-import HeaderNavBar from './HeaderNavBar'
+import React from "react";
+import Footer from "./Footer";
+import HeaderNavBar from "./HeaderNavBar";
 
-import phoneIcon from '../static/icons/icon-phone.svg'
+import phoneIcon from "../static/icons/icon-phone.svg";
 
 /*
 EVERY PAGE Requires:
@@ -97,4 +97,4 @@ const Layout = props => {
   );
 };
 
-export default Layout
+export default Layout;

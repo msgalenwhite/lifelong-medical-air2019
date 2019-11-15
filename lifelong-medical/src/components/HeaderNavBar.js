@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
 
-import logo from '../static/logo.jpg'
+import logo from "../static/logo.jpg";
 
-import {Link} from 'gatsby'
-
+import { Link } from "gatsby";
 
 const HeaderBar = props => {
   const secondaryHeader = [
@@ -84,4 +83,4 @@ const HeaderBar = props => {
   );
 };
 
-export default HeaderBar
+export default HeaderBar;
