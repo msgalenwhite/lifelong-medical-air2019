@@ -14,7 +14,7 @@ exports.createPages = async function ({ actions, graphql, reporter}, options) {
                   }
                 }
               }
-            
+
         }
     `)
     if(data.errors) {
@@ -34,6 +34,6 @@ exports.createPages = async function ({ actions, graphql, reporter}, options) {
                 context: {id: id}
             })
         }
-        
+
     });
 }

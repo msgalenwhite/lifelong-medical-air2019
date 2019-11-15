@@ -1,5 +1,5 @@
-import React from 'react'
-import Layout from '../components/Layout.js'
+import React from "react";
+import Layout from "../components/Layout.js";
 
 const CommunityPartners = () => {
   return (
@@ -9,4 +9,4 @@ const CommunityPartners = () => {
   );
 };
 
-export default CommunityPartners
+export default CommunityPartners;
