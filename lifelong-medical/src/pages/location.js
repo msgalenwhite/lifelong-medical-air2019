@@ -20,7 +20,7 @@ const Location = ({ location, locationID }) => {
       <h2>Services available at this location:</h2>
       <GoogleMap
         locations={[location.state]}
-        center={{ lat: lat, lng: long }}
+        center={{ lat: Number(lat), lng: Number(long) }}
       />
 
       <div className="slice">
