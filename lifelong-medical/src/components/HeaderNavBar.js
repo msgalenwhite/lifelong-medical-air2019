@@ -1,9 +1,8 @@
-const React = require("react")
+import React from 'react'
 
-const image = require("../static/header1.jpg")
-const logo = require("../static/logo.jpg")
+import logo from '../static/logo.jpg'
 
-const { Link } = require("gatsby")
+import {Link} from 'gatsby'
 
 const HeaderBar = props => {
   const secondaryHeader = [
@@ -85,4 +84,4 @@ const HeaderBar = props => {
   )
 }
 
-module.exports = HeaderBar
+export default HeaderBar

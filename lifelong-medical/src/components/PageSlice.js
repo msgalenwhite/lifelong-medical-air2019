@@ -1,4 +1,4 @@
-const React = require("React")
+import React from 'react'
 
 const PageSlice = props => {
   return (
@@ -9,4 +9,4 @@ const PageSlice = props => {
   )
 }
 
-module.exports = PageSlice
+export default PageSlice

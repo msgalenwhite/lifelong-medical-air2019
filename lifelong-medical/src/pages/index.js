@@ -1,7 +1,7 @@
-const React = require("React")
-const Layout = require("../components/Layout.js")
-const PageSlice = require("../components/PageSlice.js")
-const photo = require("../static/filler1.jpg")
+import React from 'react'
+import Layout from '../components/Layout'
+import PageSlice from '../components/PageSlice'
+import photo from '../static/filler1.jpg'
 
 const MainPage = () => {
   const values = [
@@ -120,4 +120,4 @@ const MainPage = () => {
   )
 }
 
-module.exports = MainPage
+export default MainPage

@@ -1,8 +1,8 @@
-const React = require("React")
-const Footer = require("./Footer.js")
-const HeaderNavBar = require("./HeaderNavBar.js")
+import React from 'react'
+import Footer from './Footer'
+import HeaderNavBar from './HeaderNavBar'
 
-const phoneIcon = require("../static/icons/icon-phone.svg")
+import phoneIcon from '../static/icons/icon-phone.svg'
 
 const Layout = props => {
   const phoneNumber = (
@@ -57,4 +57,4 @@ const Layout = props => {
   )
 }
 
-module.exports = Layout
+export default Layout
