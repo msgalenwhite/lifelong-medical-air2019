@@ -1,5 +1,5 @@
-const React = require("React");
-const SocialIconBar = require("./SocialIconBar");
+import React from 'react'
+import SocialIconBar from './SocialIconBar'
 
 const Footer = props => {
   const contactColumn = (
@@ -84,4 +84,4 @@ const _footerTextExamples = [
   }
 ];
 
-module.exports = Footer;
+export default Footer
