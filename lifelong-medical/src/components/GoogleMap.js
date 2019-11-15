@@ -77,9 +77,7 @@ const GoogleMap = props => {
   return (
     <div style={{ height: height, width: width, marginBottom: "1em" }}>
       <GoogleMapReact
-        // googleMapLoader={googleMapLoader}
-
-        bootstrapURLKeys={{ key: 'AIzaSyDyWSlMIc1944AeMTjW_1fwx1ob7wrh7I4' }}
+        bootstrapURLKeys={{ key: ACCESS_TOKEN_HERE}}
 
         center={props.center ? props.center : defaultProps.center}
         defaultZoom={defaultProps.zoom}
