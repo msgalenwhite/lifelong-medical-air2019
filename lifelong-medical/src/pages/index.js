@@ -3,6 +3,23 @@ import Layout from '../components/Layout'
 import PageSlice from '../components/PageSlice'
 import photo from '../static/filler1.jpg'
 
+/*
+Needed content:
+
+- values: Array<string>
+- header for values - string
+- services
+  [{
+  header: string,
+  items: Array<string>
+}]
+- header for services - string
+- img {src: url, alt: string} TODO
+- mission - string
+- header for mission - string
+
+*/
+
 const MainPage = () => {
   const values = [
     "We respect each person and celebrate the rich diversity of our communities.",
@@ -10,10 +27,10 @@ const MainPage = () => {
     "We are dedicated to recruiting, training, and supporting a diverse, compassionate, and skilled staff",
     "We are committed to eliminating health disparities.",
     "We maximize our impact on the health of our community through local, state, and national partnerships.",
-    "We continuously seek to hear our patients' voice as we assess, develop, and improve our programs.",
+    "We continuously seek to hear our patients' voice as we assess, develop, and improve our programs."
   ].map((item, index) => {
-    return <li key={`values_${index}`}>{item}</li>
-  })
+    return <li key={`values_${index}`}>{item}</li>;
+  });
 
   const services = [
     {
@@ -30,8 +47,8 @@ const MainPage = () => {
         // "Podiatry",
         "Women's Health/Family Planning",
         "Physicals for School, Work, & Sports",
-        "On-Site Lab & Blood Draws",
-      ],
+        "On-Site Lab & Blood Draws"
+      ]
     },
     {
       header: "Dental",
@@ -39,7 +56,7 @@ const MainPage = () => {
         "Dental Hygiene",
         "Regular exams and screenings",
         "Pediatric, Adult, and Geriatric",
-        "Dental Treatments and Surgery",
+        "Dental Treatments and Surgery"
         // "Fillings",
         // "Dentures",
         // "Extractions",
@@ -47,16 +64,16 @@ const MainPage = () => {
         // "Sealants for Children",
         // "Molar Root Canals",
         // "Crowns and Bridges",
-      ],
+      ]
     },
     {
       header: "Behavioral Health",
       items: [
         "Mental Health Treatment",
         "Recovery Services",
-        "Connecting to social services",
-      ],
-    },
+        "Connecting to social services"
+      ]
+    }
     // { // TODO move to "Become a patient"
     //   header: "Eligibility & Enrollment",
     //   items: [
@@ -75,12 +92,12 @@ const MainPage = () => {
           {columnData.items.map((item, index) => {
             return (
               <li key={`services_${columnData.header}_${index}`}>{item}</li>
-            )
+            );
           })}
         </ul>
       </div>
-    )
-  })
+    );
+  });
 
   return (
     <Layout>
@@ -110,14 +127,14 @@ const MainPage = () => {
           style={{
             display: "flex",
             justifyContent: "space-around",
-            flexWrap: "wrap",
+            flexWrap: "wrap"
           }}
         >
           {services}
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export default MainPage

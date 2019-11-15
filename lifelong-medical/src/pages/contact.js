@@ -6,7 +6,7 @@ const Contact = () => {
     <Layout>
       <h1 className="centerText">Contact Us</h1>
     </Layout>
-  )
-}
+  );
+};
 
 export default Contact

@@ -24,4 +24,5 @@ const SocialIconBar = props => {
 
   return <span className="socialIconBar">{icons}</span>;
 };
+
 export default SocialIconBar;

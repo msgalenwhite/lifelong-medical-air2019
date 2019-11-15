@@ -212,3 +212,34 @@ button {
     }
   }
 }
+
+.locationList {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow-y: scroll;
+  height: 60vh;
+  padding-left: 0;
+
+  .locationBlock {
+    list-style-type: none;
+    background-color: $light-gray;
+    margin: .2em;
+    padding: .5em;
+    font-size: .9em;
+    h2 {
+      margin: .3em 0;
+      font-weight: normal;
+    }
+    address {
+      font-style: normal;
+    }
+    a {
+      text-decoration: none;
+        color: $logo-blue;
+    }
+  }
+  .locationBlock:hover {
+    background-color: #F0F0F0;
+  }
+}

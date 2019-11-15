@@ -15,28 +15,28 @@ const Footer = props => {
       </address>
       <SocialIconBar />
     </div>
-  )
+  );
 
   const footerText = _footerTextExamples.map((columnData, dataIndex) => {
     const items = columnData.content.map((item, index) => {
-      return <li key={`${columnData.header}_${item}_${index}`}>{item}</li>
-    })
+      return <li key={`${columnData.header}_${item}_${index}`}>{item}</li>;
+    });
 
     return (
       <div className="column" key={`footer_column_${dataIndex}`}>
         <h3>{columnData.header}</h3>
         <ul>{items}</ul>
       </div>
-    )
-  })
+    );
+  });
 
   return (
     <div className="footer">
       {contactColumn}
       {footerText}
     </div>
-  )
-}
+  );
+};
 
 const _footerTextExamples = [
   {
@@ -46,8 +46,8 @@ const _footerTextExamples = [
       "Executive Leadership",
       "History",
       "Diversity",
-      "Partnerships",
-    ],
+      "Partnerships"
+    ]
   },
   {
     header: "Program & Services",
@@ -56,8 +56,8 @@ const _footerTextExamples = [
       "Executive Leadership",
       "History",
       "Diversity",
-      "Partnerships",
-    ],
+      "Partnerships"
+    ]
   },
   {
     header: "Locations",
@@ -69,8 +69,8 @@ const _footerTextExamples = [
       // "Partnerships",
       "Health",
       "Dental",
-      "Behavioral Health",
-    ],
+      "Behavioral Health"
+    ]
   },
   {
     header: "Support Us",
@@ -79,9 +79,9 @@ const _footerTextExamples = [
       "Executive Leadership",
       "History",
       "Diversity",
-      "Partnerships",
-    ],
-  },
-]
+      "Partnerships"
+    ]
+  }
+];
 
 export default Footer
