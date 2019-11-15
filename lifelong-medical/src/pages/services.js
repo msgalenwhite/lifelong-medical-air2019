@@ -6,7 +6,7 @@ const Services = props => {
     <Layout>
       <h1 className="centerText">Our Services</h1>
     </Layout>
-  )
-}
+  );
+};
 
 export default Services

@@ -6,7 +6,7 @@ const NewPatient = () => {
     <Layout>
       <h1 className="centerText">Become a Patient</h1>
     </Layout>
-  )
-}
+  );
+};
 
 export default NewPatient
