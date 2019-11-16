@@ -181,22 +181,23 @@ button {
   justify-content: center;
   padding: 30px;
   margin-top: 1em;
+  flex-wrap: wrap;
 
   h3 {
     color: white;
-    font-size: .9em;
+    font-size: 1.1em;
     text-align: left;
     margin: 0;
     margin-bottom: .4em;
   }
   p, address {
-    font-size: .7em;
+    font-size: .9em;
     text-align: left;
   }
 
   .column {
     margin: 0 .5em;
-    width: 10em;
+    width: 12em;
   }
 
   .columnHeader {
@@ -207,14 +208,13 @@ button {
     list-style-type: none;
     padding: 0;
     margin-top: .7em;
-    font-size: .7em;
+    font-size: .9em;
   }
 
   .socialIconBar {
     img {
-      height: 1em;
-      padding: .2em;
-      margin: .4em 0;
+      height: 1.3em;
+      margin: .4em .3em;
     }
   }
 }
