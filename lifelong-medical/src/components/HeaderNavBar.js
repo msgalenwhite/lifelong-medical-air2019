@@ -2,79 +2,43 @@ import React from "react";
 
 import logo from "../static/logo.jpg";
 
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 
 const HeaderBar = props => {
-  const secondaryHeader = [
-    {
-      text: "Home",
-      route: "/",
-      gatsby: true
-    },
-    {
-      text: "Our Services",
-      route: "/services",
-      gatsby: true
-    },
-    {
-      text: "Find a Location",
-      route: "/locations",
-      gatsby: true
-    },
-    {
-      text: "Become a Patient",
-      route: "/new_patient",
-      gatsby: true
-    },
-    {
-      text: "Work with Us",
-      route: "/community_partners",
-      gatsby: true
-    },
-    {
-      text: "Contact Us",
-      route: "/contact",
-      gatsby: true
+  const data = useStaticQuery(graphql`
+    query SecondaryHeaderData {
+      lifeLongWordPress {
+        pages {
+          nodes {
+            slug
+            title
+            menuOrder
+          }
+        }
+      }
     }
-  ].map((item, index) => {
-    if (item.route !== null) {
-      return item.gatsby ? (
+  `);
+
+  const secondaryHeader = data.lifeLongWordPress.pages.nodes
+    .filter(item => item.menuOrder !== null)
+    .sort((a, b) => (a.menuOrder > b.menuOrder ? 1 : -1))
+    .map(item => {
+      return (
         <Link
-          to={item.route}
+          to={item.slug === "home-page" ? "/" : item.slug}
           className="secondaryHeaderText"
           activeClassName="secondaryActive"
-          partiallyActive={item.route !== "/"}
+          partiallyActive={item.slug !== "home-page"}
           replace
-          key={`secondary_header_${index}`}
+          key={`secondary_header_${item.menuOrder}`}
         >
-          {item.text}
+          {item.title}
         </Link>
-      ) : (
-        <a
-          href={item.route}
-          alt={`Exernal link to ${item.text}`}
-          className="secondaryHeaderText"
-          key={`secondary_header_${index}`}
-        >
-          {item.text}
-        </a>
       );
-    } else {
-      return (
-        <span key={`secondary_header_${index}`} className="secondaryHeaderText">
-          {item.text}
-        </span>
-      );
-    }
-  });
+    });
+
   return (
     <div>
-      {
-        // TODO: look into breakpoints based on width of picture
-        // <div className="headerImage">
-        //       <img src={image} alt="Faces of healthy children" height="200" />
-        //     </div>
-      }
       <div className="logoNavBar">
         <img className="logo" src={logo} alt="Lifelong Medical Logo" />
         <nav className="secondaryHeader">{secondaryHeader}</nav>
