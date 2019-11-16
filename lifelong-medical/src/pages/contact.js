@@ -1,12 +1,12 @@
-const React = require("React")
-const Layout = require("../components/Layout.js")
+import React from "react";
+import Layout from "../components/Layout";
 
 const Contact = () => {
   return (
     <Layout>
       <h1 className="centerText">Contact Us</h1>
     </Layout>
-  )
-}
+  );
+};
 
-module.exports = Contact
+export default Contact;

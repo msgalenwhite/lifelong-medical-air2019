@@ -1,12 +1,12 @@
-const React = require("React")
-const Layout = require("../components/Layout.js")
+import React from "react";
+import Layout from "../components/Layout";
 
 const NewPatient = () => {
   return (
     <Layout>
       <h1 className="centerText">Become a Patient</h1>
     </Layout>
-  )
-}
+  );
+};
 
-module.exports = NewPatient
+export default NewPatient;

@@ -1,17 +1,17 @@
-const React = require("react")
-const fb = require("../static/icons/icon-facebook.svg")
-const insta = require("../static/icons/icon-instagram.svg")
-const linkedIn = require("../static/icons/icon-linkedIn.svg")
-const twitter = require("../static/icons/icon-twitter.svg")
-const youTube = require("../static/icons/icon-youtube.svg")
+import React from "react";
+import facebookIcon from "../static/icons/icon-facebook.svg";
+import instagramIcon from "../static/icons/icon-instagram.svg";
+import linkedInIcon from "../static/icons/icon-linkedIn.svg";
+import twitterIcon from "../static/icons/icon-twitter.svg";
+import youTubeIcon from "../static/icons/icon-youtube.svg";
 
 const SocialIconBar = props => {
   const icons = [
-    { icon: fb, label: "Facebook" },
-    { icon: insta, label: "Instagram" },
-    { icon: linkedIn, label: "LinkedIn" },
-    { icon: twitter, label: "Twitter" },
-    { icon: youTube, label: "youTube" },
+    { icon: facebookIcon, label: "Facebook" },
+    { icon: instagramIcon, label: "Instagram" },
+    { icon: linkedInIcon, label: "LinkedIn" },
+    { icon: twitterIcon, label: "Twitter" },
+    { icon: youTubeIcon, label: "youTube" }
   ].map((iconInfo, index) => {
     return (
       <img
@@ -19,9 +19,10 @@ const SocialIconBar = props => {
         alt={iconInfo.label}
         key={`socialIcon_${index}`}
       />
-    )
-  })
+    );
+  });
 
-  return <span className="socialIconBar">{icons}</span>
-}
-module.exports = SocialIconBar
+  return <span className="socialIconBar">{icons}</span>;
+};
+
+export default SocialIconBar;

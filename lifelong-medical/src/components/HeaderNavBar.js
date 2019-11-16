@@ -1,44 +1,41 @@
-const React = require("react")
+import React from "react";
 
-const image = require("../static/header1.jpg")
-const logo = require("../static/logo.jpg")
+import logo from "../static/logo.jpg";
 
-const { Link } = require("gatsby")
+import { Link } from "gatsby";
 
 const HeaderBar = props => {
   const secondaryHeader = [
     {
       text: "Home",
       route: "/",
-      gatsby: true,
+      gatsby: true
     },
     {
       text: "Our Services",
       route: "/services",
-      gatsby: true,
+      gatsby: true
     },
     {
-      // ideally, this would open in an iphrame, but Google maps
-      // charges to get an API key
       text: "Find a Location",
       route: "/locations",
-      gatsby: true,
+      gatsby: true
     },
     {
       text: "Become a Patient",
       route: "/new_patient",
-      gatsby: true,
+      gatsby: true
     },
     {
       text: "Work with Us",
       route: "/community_partners",
-      gatsby: true,
+      gatsby: true
     },
     {
       text: "Contact Us",
       route: "/contact",
-      gatsby: true,
-    },
+      gatsby: true
+    }
   ].map((item, index) => {
     if (item.route !== null) {
       return item.gatsby ? (
@@ -46,7 +43,7 @@ const HeaderBar = props => {
           to={item.route}
           className="secondaryHeaderText"
           activeClassName="secondaryActive"
-          partiallyActive={item.text !== "Our Services"}
+          partiallyActive={item.route !== "/"}
           replace
           key={`secondary_header_${index}`}
         >
@@ -61,18 +58,19 @@ const HeaderBar = props => {
         >
           {item.text}
         </a>
-      )
+      );
     } else {
       return (
         <span key={`secondary_header_${index}`} className="secondaryHeaderText">
           {item.text}
         </span>
-      )
+      );
     }
-  })
+  });
   return (
     <div>
       {
+        // TODO: look into breakpoints based on width of picture
         // <div className="headerImage">
         //       <img src={image} alt="Faces of healthy children" height="200" />
         //     </div>
@@ -82,7 +80,7 @@ const HeaderBar = props => {
         <nav className="secondaryHeader">{secondaryHeader}</nav>
       </div>
     </div>
-  )
-}
+  );
+};
 
-module.exports = HeaderBar
+export default HeaderBar;

@@ -1,12 +1,12 @@
-const React = require("React")
+import React from "react";
 
-const PageSlice = props => {
+const ImageSlice = props => {
   return (
     <div className="slice">
       <div className="sliceText">{props.children}</div>
       <img className="sliceImage" src={props.imgSrc} alt={props.imgAlt} />
     </div>
-  )
-}
+  );
+};
 
-module.exports = PageSlice
+export default ImageSlice;
